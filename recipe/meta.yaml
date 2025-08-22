@@ -1,5 +1,5 @@
 {% set name = "zndraw" %}
-{% set version = "0.5.10" %}
+{% set version = "0.5.11" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zndraw-{{ version }}.tar.gz
-  sha256: bc4336494b4e50697538f8c09dd26d5e979b1b5e83f5c61625ac5de8e4ba2952
+  sha256: ddfac6d9347480093ccd66e8a130d547a9bb1a31f9a2772886cde95d0a9db8d4
 
 build:
   noarch: python
@@ -37,7 +37,7 @@ requirements:
     - sqlalchemy >=2.0.38
     - redis-py >=5.2.1
     - splines >=0.3.2
-    - znsocket >=0.2.8
+    - znsocket ==0.2.8
     - znjson >=0.2.6
     - requests
 
