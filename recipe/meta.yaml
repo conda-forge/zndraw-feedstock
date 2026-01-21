@@ -21,6 +21,7 @@ requirements:
     - hatchling
     - hatch-vcs
     - pip
+    - nodejs
   run:
     - argon2-cffi >=25.1.0
     - asebytes >=0.1.7
