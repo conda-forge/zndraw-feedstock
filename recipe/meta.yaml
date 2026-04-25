@@ -1,6 +1,6 @@
 {% set name = "zndraw" %}
-{% set version = "0.5.11" %}
-{% set python_min = "3.10" %}
+{% set version = "0.6.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zndraw-{{ version }}.tar.gz
-  sha256: ddfac6d9347480093ccd66e8a130d547a9bb1a31f9a2772886cde95d0a9db8d4
+  sha256: 8dc8b3efe3f33ab3442810c9300dcfe1e2b864923d90fb83548f8133d1c01382
 
 build:
   noarch: python
@@ -19,25 +19,42 @@ requirements:
   host:
     - python {{ python_min }}
     - hatchling
+    - hatch-vcs
     - pip
+    - nodejs
   run:
-    - eventlet >=0.39.0
+    - argon2-cffi >=25.1.0
+    - asebytes >=0.1.7
+    - cachetools >=6.2.0
+    - dnspython >=2.8.0
+    - fsspec >=2025.10.0
+    - msgpack-numpy >=0.4.8
+    - msgpack-python >=1.1.1
+    - prometheus_client >=0.23.1
+    - pydantic-settings >=2.8.0
+    - pyjwt >=2.10.1
+    - pymongo >=4.10.0
+    - python-lmdb >=1.7.5
+    - rich >=14.1.0
+    - python-vesin >=0.3.8
+    - znh5md >=0.4.8
+    - eventlet >=0.40.3
     - python >={{ python_min }},<4.0.0
-    - ase >=3.24.0
-    - typer >=0.15.1
-    - flask >=3.1.0
+    - ase >=3.26.0
+    - typer >=0.19.2
+    - flask >=3.1.2
     - tqdm >=4.67.1
     - flask-socketio >=5.5.1
-    - networkx >=3.4.2
-    - pydantic >=2.10.6
-    - python-socketio >=5.12.1
-    - plotly >=6.0.0
-    - pandas >=2.2.3
-    - celery >=5.4.0
+    - networkx >=3.5
+    - pydantic >=2.11.9
+    - python-socketio >=5.13.0
+    - plotly >=6.3.1
+    - pandas >=2.3.3
+    - celery >=5.5.3
     - sqlalchemy >=2.0.38
-    - redis-py >=5.2.1
-    - splines >=0.3.2
-    - znsocket ==0.2.8
+    - redis-py >=6.4.0
+    - splines >=0.3.3
+    - znsocket >=0.3.0
     - znjson >=0.2.6
     - requests
 
